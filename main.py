@@ -10,7 +10,7 @@ get_google_api_key()
 model = init_model(MODEL_NAME)
 
 # Initialize database and toolkit
-db, toolkit = init_db()
+db, toolkit = init_db(model)
 toolkit.llm = model
 print_db_info(db)
 
@@ -26,5 +26,5 @@ system_prompt = get_system_prompt(dialect=db.dialect, top_k=TOP_K_RESULTS)
 agent = create_sql_agent(model, tools, system_prompt)
 
 # Question
-question = "Which genre on average has the longest tracks?"
+question = "Which city has the most users?"
 run_agent(agent, question, thread_id=THREAD_ID)

@@ -71,7 +71,7 @@ This will:
 ### Example
 
 ```text
-> Which genre on average has the longest tracks?
+> Which city has the most users?
 INTERRUPTED:
 Tool execution pending approval: SQL query generated
 Result:

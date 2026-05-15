@@ -3,9 +3,9 @@ from langchain_community.agent_toolkits import SQLDatabaseToolkit
 from config import DB_URI
 
 
-def init_db():
+def init_db(llm):
     db = SQLDatabase.from_uri(DB_URI)
-    toolkit = SQLDatabaseToolkit(db=db, llm=None)
+    toolkit = SQLDatabaseToolkit(db=db, llm=llm)
     return db, toolkit
 
 
