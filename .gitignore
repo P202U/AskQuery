@@ -1,0 +1,43 @@
+# --- uv / Environment ---
+.venv/
+.uv/
+
+# --- Python Artifacts ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+build/
+dist/
+*.egg-info/
+
+# --- Local Secrets ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Database (Local Development) ---
+# Keep your migrations, ignore the actual data files
+*.sqlite3
+*.db
+*.local.db
+# If your pg tool creates temp csv exports:
+*.csv
+*.log
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# --- LangGraph / LangChain ---
+.langchain_cache/
+.langgraph/
