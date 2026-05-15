@@ -2,7 +2,6 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.agents import create_agent
 from langchain.agents.middleware import HumanInTheLoopMiddleware
 from langgraph.checkpoint.memory import InMemorySaver
-from langgraph.types import Command
 
 
 def init_model(model_name: str):
@@ -29,7 +28,7 @@ def run_agent(agent, question, thread_id="1"):
     config = {"configurable": {"thread_id": thread_id}}
 
     for step in agent.stream(
-        Command(resume={"decisions": [{"type": "approve"}]}),
+        {"messages": [{"role": "user", "content": question}]},
         config=config,
         stream_mode="values",
     ):
