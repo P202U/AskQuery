@@ -10,20 +10,18 @@ The agent is interactive and can approve queries before execution, making it saf
 - Uses **Google Gemini 1.5** model for reasoning and query generation.
 - Human-in-the-loop approval for all database queries.
 - Supports multiple database tables with schema introspection.
-- Fast local testing with **Uvicorn**.
 - Easily extendable to other SQL databases or AI models.
 
 ## Project Structure
 
 ```
-my_sql_agent/
+askquery/
 │
 ├── main.py # Entry point to run the agent
 ├── config.py # Configuration and environment setup
 ├── database.py # Database connection & toolkit setup
 ├── agent_setup.py # Agent creation, middleware, and execution logic
-├── prompts.py # System prompt templates
-└── README.md
+└── prompts.py # System prompt templates
 ```
 
 ## Requirements
