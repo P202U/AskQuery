@@ -1,6 +1,3 @@
-### Yup, I'm that bad at this. And AI doesn't help
-
-```
 # SQL AI Agent
 
 A Python project that uses **LangChain**, **Google Gemini AI**, and **SQLite** to build an intelligent agent capable of querying a SQL database in natural language.
@@ -17,7 +14,6 @@ The agent is interactive and can approve queries before execution, making it saf
 - Easily extendable to other SQL databases or AI models.
 
 ## Project Structure
-```
 
 ```
 my_sql_agent/
@@ -28,7 +24,6 @@ my_sql_agent/
 ├── agent_setup.py # Agent creation, middleware, and execution logic
 ├── prompts.py # System prompt templates
 └── README.md
-
 ```
 
 ## Requirements
